@@ -6,7 +6,8 @@ class SearchBar extends React.Component {
   //onFormSubmit 是一个独立的方程，没有state, 所以this.state会出现error, 用arrow function 可以解决binding this 的问题
   onFormSubmit = event => {
     event.preventDefault();
-    console.log(this.state.term);
+    // console.log(this.state.term);
+    this.props.onSubmit(this.state.term)
   };
 
   // these are React controled input
